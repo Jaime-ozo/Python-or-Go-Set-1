@@ -3,6 +3,9 @@
 This assignment will familiarize you with Python's basics.
 '''
 
+import math
+
+
 def savings(gross_pay, tax_rate, expenses):
     '''Savings.
 
@@ -66,7 +69,8 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    remaining_material = total_material - (num_jobs * job_consumption)
+    return f"{remaining_material}{material_units}"
 
 def interest(principal, rate, periods):
     '''Interest.
@@ -95,4 +99,5 @@ def interest(principal, rate, periods):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    final_value = math.floor(principal * (1 + rate * periods))
+    return final_value
